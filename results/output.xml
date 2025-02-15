@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2025-02-15T23:45:17.845780" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase" source="c:\Users\ASUS\Documents\Punpro\Automate\Web\Testcase">
+<suite id="s1-s1" name="Staging Punpro" source="c:\Users\ASUS\Documents\Punpro\Automate\Web\Testcase\staging_punpro">
+<suite id="s1-s1-s1" name="Component" source="c:\Users\ASUS\Documents\Punpro\Automate\Web\Testcase\staging_punpro\Component">
+<suite id="s1-s1-s1-s1" name="Bottombar" source="c:\Users\ASUS\Documents\Punpro\Automate\Web\Testcase\staging_punpro\Component\bottombar">
+<suite id="s1-s1-s1-s1-s1" name="Bottombar" source="c:\Users\ASUS\Documents\Punpro\Automate\Web\Testcase\staging_punpro\Component\bottombar\bottombar.robot">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-15T23:45:18.173374" elapsed="0.000000"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Case 001 Bottombar - PromotionPage" line="14">
+<kw name="Open web browser (maximize)" owner="default_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:18.176373" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/contact'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:45:18.176373" elapsed="6.274919"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-15T23:45:24.451292" elapsed="2.200020"/>
+</kw>
+<arg>${url_staging_punpro_contact}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:45:18.175372" elapsed="8.476956"/>
+</kw>
+<kw name="Click link (same tab)" owner="default_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${link}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-15T23:45:26.666452" elapsed="0.309284"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:26.975736" level="INFO">Clicking element 'css=a.FooterSection__MenuText-sc-15kkac3-3[href='/promotion']'.</msg>
+<arg>${link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:45:26.975736" elapsed="0.471922"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-15T23:45:27.447658" elapsed="0.444922"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:28.027597" level="INFO">Current location is 'https://staging-www.punpro.com/promotion'.</msg>
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:45:27.892580" elapsed="0.135523"/>
+</kw>
+<arg>${bottombar_promotion}</arg>
+<arg>${url_staging_punpro_promotion}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:45:26.664366" elapsed="1.364751"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-15T23:45:28.030116" elapsed="2.444972"/>
+</kw>
+<doc>ตรวจสอบการทำงานของปุ่ม "โปรโมชั่น"</doc>
+<tag>Bottombar</tag>
+<status status="PASS" start="2025-02-15T23:45:18.173374" elapsed="12.302671"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="Case 002 Bottombar - ArticlePage" line="19">
+<kw name="Open web browser (maximize)" owner="default_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:30.481050" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/contact'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:45:30.480049" elapsed="8.382422"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-15T23:45:38.863483" elapsed="0.183625"/>
+</kw>
+<arg>${url_staging_punpro_contact}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:45:30.479047" elapsed="8.568685"/>
+</kw>
+<kw name="Click link (same tab)" owner="default_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${link}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-15T23:45:39.058268" elapsed="0.270720"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:39.330000" level="INFO">Clicking element 'css=a.FooterSection__MenuText-sc-15kkac3-3[href='/article']'.</msg>
+<arg>${link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:45:39.328988" elapsed="0.325390"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-15T23:45:39.654378" elapsed="0.721432"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:40.483827" level="INFO">Current location is 'https://staging-www.punpro.com/article'.</msg>
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:45:40.375810" elapsed="0.108017"/>
+</kw>
+<arg>${bottombar_article}</arg>
+<arg>${url_staging_punpro_article}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:45:39.051914" elapsed="1.431913"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-15T23:45:40.484858" elapsed="2.452792"/>
+</kw>
+<doc>ตรวจสอบการทำงานของปุ่ม "บทความ"</doc>
+<tag>Bottombar</tag>
+<status status="PASS" start="2025-02-15T23:45:30.477047" elapsed="12.461568"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t3" name="Case 003 Bottombar - ShopperPostsPage" line="24">
+<kw name="Open web browser (maximize)" owner="default_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:42.942612" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/contact'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:45:42.942612" elapsed="7.664404"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-15T23:45:50.607016" elapsed="0.181357"/>
+</kw>
+<arg>${url_staging_punpro_contact}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:45:42.941607" elapsed="7.847275"/>
+</kw>
+<kw name="Click link (same tab)" owner="default_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${link}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-15T23:45:50.796601" elapsed="0.267010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:51.064620" level="INFO">Clicking element 'css=a.FooterSection__MenuText-sc-15kkac3-3[href='/shopper_posts']'.</msg>
+<arg>${link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:45:51.063611" elapsed="0.319363"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-15T23:45:51.383482" elapsed="0.729144"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:52.218787" level="INFO">Current location is 'https://staging-www.punpro.com/shopper_posts'.</msg>
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:45:52.112626" elapsed="0.106161"/>
+</kw>
+<arg>${bottombar_shopper_posts}</arg>
+<arg>${url_staging_punpro_shoppper_posts}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:45:50.790959" elapsed="1.427828"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-15T23:45:52.219887" elapsed="2.475467"/>
+</kw>
+<doc>ตรวจสอบการทำงานของปุ่ม "ปันโปรรับหิ้ว"</doc>
+<tag>Bottombar</tag>
+<status status="PASS" start="2025-02-15T23:45:42.939608" elapsed="11.756746"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t4" name="Case 004 Bottombar - PromotionOnlinePage" line="29">
+<kw name="Open web browser (maximize)" owner="default_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:45:54.702352" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/contact'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:45:54.701353" elapsed="7.797996"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-15T23:46:02.499349" elapsed="0.201036"/>
+</kw>
+<arg>${url_staging_punpro_contact}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:45:54.700353" elapsed="8.005223"/>
+</kw>
+<kw name="Click link (same tab)" owner="default_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${link}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-15T23:46:02.710718" elapsed="0.237710"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:02.948984" level="INFO">Clicking element 'css=a.FooterSection__MenuText-sc-15kkac3-3[href='/promotion_online']'.</msg>
+<arg>${link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:46:02.948984" elapsed="0.332001"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-15T23:46:03.280985" elapsed="1.081779"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:04.471771" level="INFO">Current location is 'https://staging-www.punpro.com/promotion_online'.</msg>
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:46:04.362764" elapsed="0.109007"/>
+</kw>
+<arg>${bottombar_promotion_online}</arg>
+<arg>${url_staging_punpro_promotion_online}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:46:02.708991" elapsed="1.762780"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-15T23:46:04.473117" elapsed="2.513990"/>
+</kw>
+<doc>ตรวจสอบการทำงานของปุ่ม "โปรออนไลน์"</doc>
+<tag>Bottombar</tag>
+<status status="PASS" start="2025-02-15T23:45:54.698357" elapsed="12.289752"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t5" name="Case 006 Bottombar - PartnerPage - not login" line="34">
+<kw name="Open web browser (maximize)" owner="default_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:06.992110" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/contact'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:46:06.992110" elapsed="7.091512"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-15T23:46:14.084636" elapsed="0.220787"/>
+</kw>
+<arg>${url_staging_punpro_contact}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:46:06.991108" elapsed="7.314886"/>
+</kw>
+<kw name="Click link (same tab)" owner="default_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${link}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-15T23:46:14.310584" elapsed="0.242009"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:14.554575" level="INFO">Clicking element 'css=a.FooterSection__MenuText-sc-15kkac3-3[href='/partner']'.</msg>
+<arg>${link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:46:14.553573" elapsed="0.716970"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-02-15T23:46:15.271049" elapsed="0.120553"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:15.499822" level="INFO">Current location is 'https://staging-www.punpro.com/login?f=/partner'.</msg>
+<arg>${url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:46:15.391602" elapsed="0.108746"/>
+</kw>
+<arg>${bottombar_partner}</arg>
+<arg>${url_staging_punpro_partner_notlogin}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:46:14.308025" elapsed="1.192856"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-15T23:46:15.502007" elapsed="2.464916"/>
+</kw>
+<doc>ตรวจสอบการทำงานของปุ่ม "พาร์ทเนอร์" เมื่อไม่ได้ login</doc>
+<tag>Bottombar</tag>
+<status status="PASS" start="2025-02-15T23:46:06.989106" elapsed="10.978419"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t6" name="Case 007 Bottombar- PartnerPage - login" line="39">
+<kw name="Open web browser (maximize)" owner="default_keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:17.972361" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/contact'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-15T23:46:17.971831" elapsed="6.565386"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-15T23:46:24.537726" elapsed="0.221087"/>
+</kw>
+<arg>${url_staging_punpro_contact}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:46:17.971294" elapsed="6.788529"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-15T23:46:24.766018" elapsed="0.284090"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:25.050614" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:46:25.050108" elapsed="0.294089"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-15T23:46:25.344704" elapsed="0.246049"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2025-02-15T23:46:24.762417" elapsed="0.828336"/>
+</kw>
+<kw name="Click login with email" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-15T23:46:25.592764" elapsed="0.253937"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:25.848014" level="INFO">Clicking element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'เข้าสู่ระบบด้วยอีเมล')]'.</msg>
+<arg>${login_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:46:25.846701" elapsed="0.267830"/>
+</kw>
+<arg>10x</arg>
+<arg>0.1s</arg>
+<arg>Click Element</arg>
+<arg>${login_email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-15T23:46:25.846701" elapsed="0.267830"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2025-02-15T23:46:25.591766" elapsed="0.524219"/>
+</kw>
+<kw name="Login as" owner="loginPopup_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:26.117986" level="INFO">Typing text 'user' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='email']'.</msg>
+<arg>${login_email_emailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:46:26.116984" elapsed="0.461674"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:26.581669" level="INFO">Typing text 'password' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='password'][placeholder='รหัสผ่าน']'.</msg>
+<arg>${login_email_passwordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:46:26.579674" elapsed="0.488988"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:27.068662" level="INFO">Clicking element 'xpath=//button[contains(@class, 'Button__ButtonStyle-zutoog-0') and contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<arg>${login_email_enter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T23:46:27.068662" elapsed="0.329532"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<tag>Login</tag>
+<status status="PASS" start="2025-02-15T23:46:26.115985" elapsed="1.283207"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:32.962693" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-15T23:46:32.963693" level="FAIL">Element 'class=LoginWithModal__ModalLoginBody-sc-1w1mlxh-0' still visible after 5 seconds.</msg>
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-02-15T23:46:27.401189" elapsed="5.569505">Element 'class=LoginWithModal__ModalLoginBody-sc-1w1mlxh-0' still visible after 5 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:38.357827" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-15T23:46:38.358828" level="FAIL">Element 'class=LoginWithModal__ModalLoginBody-sc-1w1mlxh-0' still visible after 5 seconds.</msg>
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-02-15T23:46:33.072068" elapsed="5.288756">Element 'class=LoginWithModal__ModalLoginBody-sc-1w1mlxh-0' still visible after 5 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:43.824033" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-15T23:46:43.824033" level="FAIL">Element 'class=LoginWithModal__ModalLoginBody-sc-1w1mlxh-0' still visible after 5 seconds.</msg>
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2025-02-15T23:46:38.461147" elapsed="5.363889">Element 'class=LoginWithModal__ModalLoginBody-sc-1w1mlxh-0' still visible after 5 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<msg time="2025-02-15T23:46:48.739865" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/a5c69c24b2009a2a2c3d942a3c7f2083/screenshot</msg>
+<errors>
+<msg time="2025-02-15T23:46:48.739865" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/a5c69c24b2009a2a2c3d942a3c7f2083/screenshot</msg>
+<msg time="2025-02-15T23:46:50.766444" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>
