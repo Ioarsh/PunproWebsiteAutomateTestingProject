@@ -1,0 +1,1536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-09-20T10:30:16.492310" rpa="false" schemaversion="5">
+<suite id="s1" name="Staging Punpro" source="c:\Users\ASUS\Documents\Punpro\Automate\Web\Testcase\staging_punpro">
+<suite id="s1-s1" name="Component" source="c:\Users\ASUS\Documents\Punpro\Automate\Web\Testcase\staging_punpro\Component">
+<suite id="s1-s1-s1" name="loginPopup" source="c:\Users\ASUS\Documents\Punpro\Automate\Web\Testcase\staging_punpro\Component\loginPopup">
+<suite id="s1-s1-s1-s1" name="loginPopup" source="c:\Users\ASUS\Documents\Punpro\Automate\Web\Testcase\staging_punpro\Component\loginPopup\loginPopup.robot">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>0.1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-09-20T10:30:16.951996" elapsed="0.000000"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="Case 001 Login - close" line="10">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:16.968869" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:30:16.968869" elapsed="4.529314"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:30:21.498183" elapsed="0.146729"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:30:16.968869" elapsed="4.677702"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:21.649656" elapsed="1.037589"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:22.687245" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:30:22.687245" elapsed="0.331117"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:23.018362" elapsed="0.345572"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:30:21.647597" elapsed="1.716337"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:16.968869" elapsed="6.395065"/>
+</kw>
+<kw name="Close login popup" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_close}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:23.365448" elapsed="0.255006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:23.620454" level="INFO">Clicking element 'class=LoginTemplate__ButtonCloseModal-zzd09y-4'.</msg>
+<arg>${login_close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:30:23.620454" elapsed="0.404738"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:23.365448" elapsed="0.659744"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:24.140107" level="INFO">Element 'class=LoginWithModal__ModalLoginBody-sc-1w1mlxh-0' did not exist.</msg>
+<arg>${login_popup_modal}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:24.025192" elapsed="0.114915"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:30:24.142503" elapsed="2.353265"/>
+</kw>
+<doc>ตรวจสอบการปิด popup ของหน้าล็อกอินเมื่อกดปุ่มกากบาท</doc>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:16.951996" elapsed="9.546221"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Case 002 Login - email button" line="16">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:26.519933" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:30:26.514897" elapsed="3.848940"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:30:30.364503" elapsed="0.169521"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:30:26.514897" elapsed="4.019127"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:30.535060" elapsed="1.029815"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:31.564875" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:30:31.564875" elapsed="0.494960"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:32.062354" elapsed="0.280652"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:30:30.535060" elapsed="1.807946"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:26.511762" elapsed="5.831244"/>
+</kw>
+<kw name="Click login with email" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:32.343006" elapsed="0.261331"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:32.604337" level="INFO">Clicking element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'เข้าสู่ระบบด้วยอีเมล')]'.</msg>
+<arg>${login_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:30:32.604337" elapsed="0.413391"/>
+</kw>
+<arg>10x</arg>
+<arg>0.1s</arg>
+<arg>Click Element</arg>
+<arg>${login_email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-20T10:30:32.604337" elapsed="0.413391"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:32.343006" elapsed="0.674722"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:33.278536" level="INFO">Element 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='email']' is displayed.</msg>
+<arg>${login_email_emailField}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:33.017728" elapsed="0.260808"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:33.563066" level="INFO">Element 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='password'][placeholder='รหัสผ่าน']' is displayed.</msg>
+<arg>${login_email_passwordField}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:33.281278" elapsed="0.283255"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:33.844339" level="INFO">Element 'class=LoginTemplate__ButtonAction-zzd09y-3' is displayed.</msg>
+<arg>${login_email_forgot}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:33.567180" elapsed="0.277159"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:34.122641" level="INFO">Element 'class=ButtonSecondary__ButtonStyle-sc-4uq90l-0' is displayed.</msg>
+<arg>${login_email_cancel}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:33.848082" elapsed="0.274559"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:34.385393" level="INFO">Element 'xpath=//button[contains(@class, 'Button__ButtonStyle-zutoog-0') and contains(text(), 'เข้าสู่ระบบ')]' is displayed.</msg>
+<arg>${login_email_enter}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:34.122641" elapsed="0.262752"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:34.654165" level="INFO">Element 'class=LoginTemplate__ButtonCloseModal-zzd09y-4' is displayed.</msg>
+<arg>${login_email_close}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:34.385393" elapsed="0.268772"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:30:34.654165" elapsed="2.395373"/>
+</kw>
+<doc>ตรวจสอบการทำงานของปุ่ม "เข้าสู่ระบบด้วยอีเมล"</doc>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:26.500740" elapsed="10.550818"/>
+</test>
+<test id="s1-s1-s1-s1-t3" name="Case 003 Login - google" line="27">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:37.072846" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:30:37.071306" elapsed="4.347256"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:30:41.418562" elapsed="0.213646"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:30:37.065848" elapsed="4.566360"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:41.633447" elapsed="1.079308"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:42.715285" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:30:42.712755" elapsed="0.540309"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:43.254645" elapsed="0.278387"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:30:41.633447" elapsed="1.899585"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:37.064559" elapsed="6.468473"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:43.533032" level="INFO">Clicking element 'class=SocialLogin__ButtonGoogle-mfwgwp-3'.</msg>
+<arg>${login_google}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:30:43.533032" elapsed="0.624150"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:30:44.157182" elapsed="2.383926"/>
+</kw>
+<doc>ตรวจสอบการทำงานของปุ่ม "เข้าสู่ระบบด้วย google"</doc>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:37.053238" elapsed="9.487870"/>
+</test>
+<test id="s1-s1-s1-s1-t4" name="Case 004 Login - facebook" line="32">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:46.560411" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:30:46.560411" elapsed="4.487232"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:30:51.047643" elapsed="0.180461"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:30:46.556525" elapsed="4.672067"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:51.230198" elapsed="0.907578"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:52.137776" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:30:52.137776" elapsed="0.515867"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:30:52.653643" elapsed="0.273723"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:30:51.229508" elapsed="1.697858"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:46.541108" elapsed="6.386258"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:52.927366" level="INFO">Clicking element 'class=SocialLogin__ButtonFacebook-mfwgwp-1'.</msg>
+<arg>${login_facebook}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:30:52.927366" elapsed="0.693092"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:30:53.620458" elapsed="2.354774"/>
+</kw>
+<doc>ตรวจสอบการทำงานของปุ่ม "เข้าสู่ระบบด้วย facebook"</doc>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:46.541108" elapsed="9.434124"/>
+</test>
+<test id="s1-s1-s1-s1-t5" name="Case 005 Login - email - cancel" line="37">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:30:55.999245" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:30:55.993716" elapsed="4.602701"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:31:00.596417" elapsed="0.182141"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:30:55.993716" elapsed="4.784842"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:00.781081" elapsed="1.013837"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:01.797948" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:01.794918" elapsed="0.498218"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:02.293136" elapsed="0.263577"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:31:00.778558" elapsed="1.778155"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:55.990990" elapsed="6.565723"/>
+</kw>
+<kw name="Click login with email" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:02.559853" elapsed="0.297625"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:02.857478" level="INFO">Clicking element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'เข้าสู่ระบบด้วยอีเมล')]'.</msg>
+<arg>${login_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:02.857478" elapsed="0.284077"/>
+</kw>
+<arg>10x</arg>
+<arg>0.1s</arg>
+<arg>Click Element</arg>
+<arg>${login_email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-20T10:31:02.857478" elapsed="0.284077"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:02.559853" elapsed="0.581702"/>
+</kw>
+<kw name="Click cancel" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email_cancel}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:03.141555" elapsed="0.234684"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:03.377286" level="INFO">Clicking element 'class=ButtonSecondary__ButtonStyle-sc-4uq90l-0'.</msg>
+<arg>${login_email_cancel}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:03.376239" elapsed="0.366672"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:03.141555" elapsed="0.601356"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:04.039709" level="INFO">Element 'class=SocialLogin__ButtonGoogle-mfwgwp-3' is displayed.</msg>
+<arg>${login_google}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:03.742911" elapsed="0.296798"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:04.299216" level="INFO">Element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'เข้าสู่ระบบด้วยอีเมล')]' is displayed.</msg>
+<arg>${login_email}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:04.039709" elapsed="0.259507"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:04.589027" level="INFO">Element 'class=SocialLogin__ButtonFacebook-mfwgwp-1' is displayed.</msg>
+<arg>${login_facebook}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:04.299216" elapsed="0.289811"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:04.831739" level="INFO">Element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'สมัครสมาชิก')]' is displayed.</msg>
+<arg>${login_register}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:04.589027" elapsed="0.242712"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:05.079759" level="INFO">Element 'class=LoginTemplate__ButtonCloseModal-zzd09y-4' is displayed.</msg>
+<arg>${login_close}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:04.831739" elapsed="0.248020"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:31:05.081182" elapsed="2.268364"/>
+</kw>
+<doc>ตรวจสอบการทำการของปุ่ม "ยกเลิก" เมื่อทำการเข้าสู่ระบบด้วยอีเมล</doc>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:30:55.982967" elapsed="11.366579"/>
+</test>
+<test id="s1-s1-s1-s1-t6" name="Case 006 Login - email - success" line="48">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:07.369515" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:31:07.369515" elapsed="3.836910"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:31:11.206425" elapsed="0.140254"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:31:07.365700" elapsed="3.980979"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:11.346679" elapsed="1.063047"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:12.409726" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:12.409726" elapsed="0.495016"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:12.904742" elapsed="0.246245"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:31:11.346679" elapsed="1.804308"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:07.363272" elapsed="5.787715"/>
+</kw>
+<kw name="Click login with email" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:13.150987" elapsed="0.238503"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:13.389490" level="INFO">Clicking element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'เข้าสู่ระบบด้วยอีเมล')]'.</msg>
+<arg>${login_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:13.389490" elapsed="0.415590"/>
+</kw>
+<arg>10x</arg>
+<arg>0.1s</arg>
+<arg>Click Element</arg>
+<arg>${login_email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-20T10:31:13.389490" elapsed="0.415590"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:13.150987" elapsed="0.654093"/>
+</kw>
+<kw name="Login as" owner="loginPopup_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:13.811103" level="INFO">Typing text 'testpunpro@outlook.com' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='email']'.</msg>
+<arg>${login_email_emailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:13.805080" elapsed="0.789363"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:14.594443" level="INFO">Typing text '123456' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='password'][placeholder='รหัสผ่าน']'.</msg>
+<arg>${login_email_passwordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:14.594443" elapsed="0.652762"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:15.247205" level="INFO">Clicking element 'xpath=//button[contains(@class, 'Button__ButtonStyle-zutoog-0') and contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<arg>${login_email_enter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:15.247205" elapsed="0.532300"/>
+</kw>
+<arg>testpunpro@outlook.com</arg>
+<arg>123456</arg>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:13.805080" elapsed="1.974425"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>เข้าสู่ระบบสำเร็จ</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-20T10:31:15.779505" elapsed="2.061608"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:17.841113" elapsed="3.115566"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:21.792008" level="INFO">Element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6' did not exist.</msg>
+<arg>${topbar_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:20.956679" elapsed="0.835329"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:31:21.793014" elapsed="2.286471"/>
+</kw>
+<doc>ตรวจสอบการ Login ด้วยอีเมลสำเร็จ</doc>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:07.354004" elapsed="16.725481"/>
+</test>
+<test id="s1-s1-s1-s1-t7" name="Case 007 Login - email - fail - no user" line="57">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:24.080545" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:31:24.080545" elapsed="3.913566"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:31:27.995395" elapsed="0.171834"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:31:24.080545" elapsed="4.086684"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:28.167229" elapsed="1.131322"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:29.298551" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:29.298551" elapsed="0.527671"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:29.826222" elapsed="0.300626"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:31:28.167229" elapsed="1.961325"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:24.080545" elapsed="6.048693"/>
+</kw>
+<kw name="Click login with email" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:30.129238" elapsed="0.293481"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:30.422719" level="INFO">Clicking element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'เข้าสู่ระบบด้วยอีเมล')]'.</msg>
+<arg>${login_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:30.422719" elapsed="0.320777"/>
+</kw>
+<arg>10x</arg>
+<arg>0.1s</arg>
+<arg>Click Element</arg>
+<arg>${login_email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-20T10:31:30.422719" elapsed="0.320777"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:30.129238" elapsed="0.614258"/>
+</kw>
+<kw name="Login as" owner="loginPopup_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:30.745779" level="INFO">Typing text 'testpunpro001@outlook.com' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='email']'.</msg>
+<arg>${login_email_emailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:30.745779" elapsed="0.771547"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:31.518392" level="INFO">Typing text '123456' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='password'][placeholder='รหัสผ่าน']'.</msg>
+<arg>${login_email_passwordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:31.518392" elapsed="0.665419"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:32.183811" level="INFO">Clicking element 'xpath=//button[contains(@class, 'Button__ButtonStyle-zutoog-0') and contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<arg>${login_email_enter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:32.183811" elapsed="0.513571"/>
+</kw>
+<arg>testpunpro001@outlook.com</arg>
+<arg>123456</arg>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:30.745779" elapsed="1.952604"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>There is no user record corresponding to this identifier. The user may have been deleted.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-20T10:31:32.698383" elapsed="0.807649"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:31:33.506032" elapsed="2.304131"/>
+</kw>
+<doc>ตรวจสอบการ Login ล้มเหลวเนื่องจากไม่มีบัญชีในระบบ</doc>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:24.080545" elapsed="11.729618"/>
+</test>
+<test id="s1-s1-s1-s1-t8" name="Case 008 Login - email - fail - wrong password" line="64">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:35.829404" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:31:35.829404" elapsed="4.731938"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:31:40.561342" elapsed="0.164338"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:31:35.825869" elapsed="4.900471"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:40.728394" elapsed="1.024859"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:41.754894" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:41.753864" elapsed="0.488196"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:42.242060" elapsed="0.272166"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:31:40.726340" elapsed="1.787886"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:35.815849" elapsed="6.698377"/>
+</kw>
+<kw name="Click login with email" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:42.516743" elapsed="0.257343"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:42.774086" level="INFO">Clicking element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'เข้าสู่ระบบด้วยอีเมล')]'.</msg>
+<arg>${login_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:42.774086" elapsed="0.416334"/>
+</kw>
+<arg>10x</arg>
+<arg>0.1s</arg>
+<arg>Click Element</arg>
+<arg>${login_email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-20T10:31:42.774086" elapsed="0.416334"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:42.514226" elapsed="0.676194"/>
+</kw>
+<kw name="Login as" owner="loginPopup_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:43.198597" level="INFO">Typing text 'testpunpro@outlook.com' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='email']'.</msg>
+<arg>${login_email_emailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:43.196358" elapsed="0.692767"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:43.891654" level="INFO">Typing text '1234567' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='password'][placeholder='รหัสผ่าน']'.</msg>
+<arg>${login_email_passwordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:43.889125" elapsed="0.805516"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:44.694641" level="INFO">Clicking element 'xpath=//button[contains(@class, 'Button__ButtonStyle-zutoog-0') and contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<arg>${login_email_enter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:44.694641" elapsed="0.401167"/>
+</kw>
+<arg>testpunpro@outlook.com</arg>
+<arg>1234567</arg>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:43.190420" elapsed="1.908040"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The password is invalid or the user does not have a password.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-20T10:31:45.100774" elapsed="0.848432"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:31:45.949206" elapsed="2.357951"/>
+</kw>
+<doc>ตรวจสอบการ Login ล้มเหลวเนื่องจากกรอกรหัสผิด</doc>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:35.815849" elapsed="12.491308"/>
+</test>
+<test id="s1-s1-s1-s1-t9" name="Case 009 Login - email - fail - wrong email format" line="71">
+<kw name="Open login popup on mainpage and login in with email" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:48.331545" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:31:48.331545" elapsed="4.544734"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:31:52.876279" elapsed="0.188446"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:31:48.327003" elapsed="4.737722"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:53.068238" elapsed="0.999261"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:54.067499" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:54.067499" elapsed="0.468706"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:54.536205" elapsed="0.248826"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:31:53.064725" elapsed="1.720306"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:48.323013" elapsed="6.462018"/>
+</kw>
+<kw name="Click login with email" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:54.785031" elapsed="0.295656"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:55.080687" level="INFO">Clicking element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'เข้าสู่ระบบด้วยอีเมล')]'.</msg>
+<arg>${login_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:55.080687" elapsed="0.283036"/>
+</kw>
+<arg>10x</arg>
+<arg>0.1s</arg>
+<arg>Click Element</arg>
+<arg>${login_email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-20T10:31:55.080687" elapsed="0.283036"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:54.785031" elapsed="0.578692"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:48.323013" elapsed="7.040710"/>
+</kw>
+<kw name="Login Fail - Wrong email format" owner="loginPopup_keyword">
+<kw name="Login as" owner="loginPopup_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:55.366579" level="INFO">Typing text 'testgmail.com' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='email']'.</msg>
+<arg>${login_email_emailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:55.366579" elapsed="0.639567"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:56.006146" level="INFO">Typing text '123456' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='password'][placeholder='รหัสผ่าน']'.</msg>
+<arg>${login_email_passwordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:56.006146" elapsed="0.734394"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:56.740540" level="INFO">Clicking element 'xpath=//button[contains(@class, 'Button__ButtonStyle-zutoog-0') and contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<arg>${login_email_enter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:56.740540" elapsed="0.667577"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:55.366579" elapsed="2.041538"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The email address is badly formatted.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-20T10:31:57.408117" elapsed="0.147142"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_fail_close}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:57.555259" elapsed="0.266130"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:57.821389" level="INFO">Clicking element 'class=swal2-confirm'.</msg>
+<arg>${login_fail_close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:57.821389" elapsed="0.273198"/>
+</kw>
+<arg>testgmail.com</arg>
+<arg>123456</arg>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:55.363723" elapsed="2.730864"/>
+</kw>
+<kw name="Login Fail - Wrong email format" owner="loginPopup_keyword">
+<kw name="Login as" owner="loginPopup_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:58.096912" level="INFO">Typing text 'ABCDEFG' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='email']'.</msg>
+<arg>${login_email_emailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:58.096912" elapsed="0.466815"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:58.564170" level="INFO">Typing text '123456' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='password'][placeholder='รหัสผ่าน']'.</msg>
+<arg>${login_email_passwordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:58.564170" elapsed="0.543998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:59.110680" level="INFO">Clicking element 'xpath=//button[contains(@class, 'Button__ButtonStyle-zutoog-0') and contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<arg>${login_email_enter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:59.108168" elapsed="0.433380"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:58.096912" elapsed="1.444636"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The email address is badly formatted.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-20T10:31:59.541548" elapsed="0.135066"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_fail_close}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:31:59.676614" elapsed="0.245409"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:31:59.923031" level="INFO">Clicking element 'class=swal2-confirm'.</msg>
+<arg>${login_fail_close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:31:59.922023" elapsed="0.271858"/>
+</kw>
+<arg>ABCDEFG</arg>
+<arg>123456</arg>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:58.095701" elapsed="2.098180"/>
+</kw>
+<kw name="Login Fail - Wrong email format" owner="loginPopup_keyword">
+<kw name="Login as" owner="loginPopup_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:00.227103" level="INFO">Typing text 'test@' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='email']'.</msg>
+<arg>${login_email_emailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:32:00.219079" elapsed="0.617010"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:00.836089" level="INFO">Typing text '123456' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='password'][placeholder='รหัสผ่าน']'.</msg>
+<arg>${login_email_passwordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:32:00.836089" elapsed="0.436557"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:01.272646" level="INFO">Clicking element 'xpath=//button[contains(@class, 'Button__ButtonStyle-zutoog-0') and contains(text(), 'เข้าสู่ระบบ')]'.</msg>
+<arg>${login_email_enter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:32:01.272646" elapsed="0.417479"/>
+</kw>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:32:00.219079" elapsed="1.471046"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The email address is badly formatted.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-09-20T10:32:01.690125" elapsed="0.164555"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_fail_close}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:32:01.854680" elapsed="0.266095"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:02.120775" level="INFO">Clicking element 'class=swal2-confirm'.</msg>
+<arg>${login_fail_close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:32:02.120775" elapsed="0.268726"/>
+</kw>
+<arg>test@</arg>
+<arg>123456</arg>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:32:00.219079" elapsed="2.170422"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:32:02.437532" elapsed="3.082520"/>
+</kw>
+<doc>ตรวจสอบการ Login ล้มเหลวเนื่องอีเมลไม่ตรงตามรูปแบบที่กำหนด</doc>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:31:48.315438" elapsed="17.204614"/>
+</test>
+<test id="s1-s1-s1-s1-t10" name="Case 010 Login - email - fail - too much attempt" line="80">
+<kw name="Open login popup on mainpage and login in with email" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:05.525586" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:32:05.525586" elapsed="4.922281"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-20T10:32:10.447867" elapsed="0.981094"/>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:32:05.525586" elapsed="5.903375"/>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${topbar_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:32:11.434874" elapsed="0.953416"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:12.388290" level="INFO">Clicking element 'class=NavbarTop__ButtonLogin-sc-1o9s3ao-6'.</msg>
+<arg>${topbar_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:32:12.388290" elapsed="0.348644"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_popup_modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:32:12.738101" elapsed="0.244772"/>
+</kw>
+<tag>Default</tag>
+<status status="PASS" start="2024-09-20T10:32:11.428961" elapsed="1.553912"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:32:05.525586" elapsed="7.457287"/>
+</kw>
+<kw name="Click login with email" owner="loginPopup_keyword">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-20T10:32:12.982873" elapsed="0.251371"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:13.234244" level="INFO">Clicking element 'xpath=//button[contains(@class, 'LoginTemplate__ButtonAction-zzd09y-3') and contains(text(), 'เข้าสู่ระบบด้วยอีเมล')]'.</msg>
+<arg>${login_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:32:13.234244" elapsed="0.280200"/>
+</kw>
+<arg>10x</arg>
+<arg>0.1s</arg>
+<arg>Click Element</arg>
+<arg>${login_email}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-20T10:32:13.234244" elapsed="0.280200"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:32:12.982873" elapsed="0.531571"/>
+</kw>
+<tag>Login</tag>
+<status status="PASS" start="2024-09-20T10:32:05.525586" elapsed="7.988858"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Login as" owner="loginPopup_keyword">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:13.514444" level="INFO">Typing text 'testerpunpro02@hotmail.com' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='email']'.</msg>
+<arg>${login_email_emailField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-20T10:32:13.514444" elapsed="0.634571"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:14.149015" level="INFO">Typing text '1234567' into text field 'css=input.InputText__InputComponent-sc-1flkk8i-0[type='password'][placeholder='รหัสผ่าน']'.</msg>
+<msg time="2024-09-20T10:32:14.157070" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</msg>
+<msg time="2024-09-20T10:32:14.165050" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</msg>
+<arg>${login_email_passwordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-09-20T10:32:14.149015" elapsed="0.235700">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${login_email_enter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-20T10:32:14.384715" elapsed="0.000000"/>
+</kw>
+<arg>testerpunpro02@hotmail.com</arg>
+<arg>1234567</arg>
+<tag>Login</tag>
+<status status="FAIL" start="2024-09-20T10:32:13.514444" elapsed="0.872624">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_fail_close}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-09-20T10:32:14.387068" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${login_fail_close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-20T10:32:14.387892" elapsed="0.000000"/>
+</kw>
+<var name="${no}">one</var>
+<status status="FAIL" start="2024-09-20T10:32:13.514444" elapsed="0.873448">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</status>
+</iter>
+<var>${no}</var>
+<value>one</value>
+<value>two</value>
+<value>three</value>
+<value>four</value>
+<value>five</value>
+<value>six</value>
+<status status="FAIL" start="2024-09-20T10:32:13.514444" elapsed="0.873448">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</status>
+</for>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-09-20T10:32:14.387892" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-20T10:32:14.387892" elapsed="2.133641"/>
+</kw>
+<doc>ตรวจสอบการ Login ล้มเหลวและใส่รหัสผิดมากเกินไป</doc>
+<tag>Login</tag>
+<status status="FAIL" start="2024-09-20T10:32:05.521705" elapsed="11.002881">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</status>
+</test>
+<test id="s1-s1-s1-s1-t11" name="Case 011 Login - email - forgot" line="91">
+<kw name="Open login popup on mainpage" owner="loginPopup_keyword" type="SETUP">
+<kw name="Open web browser (maximize)" owner="default_keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:16.570834" level="INFO">Opening browser 'chrome' to base url 'https://staging-www.punpro.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-20T10:32:16.562825" elapsed="3.558671"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-09-20T10:32:20.128571" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</msg>
+<msg time="2024-09-20T10:32:20.128571" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2024-09-20T10:32:20.121496" elapsed="0.034053">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</status>
+</kw>
+<arg>${url_staging_punpro}</arg>
+<arg>${browser_chrome}</arg>
+<tag>Default</tag>
+<status status="FAIL" start="2024-09-20T10:32:16.562825" elapsed="3.592724">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</status>
+</kw>
+<kw name="Open login popup" owner="topbar_keyword">
+<tag>Default</tag>
+<status status="NOT RUN" start="2024-09-20T10:32:20.155549" elapsed="0.000000"/>
+</kw>
+<tag>Login</tag>
+<status status="FAIL" start="2024-09-20T10:32:16.554787" elapsed="3.600762">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2024-09-20T10:32:22.325479" level="ERROR">When closing browser, received exception: Execution terminated by signal</msg>
+<msg time="2024-09-20T10:32:22.328003" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Closes the current browser.</doc>
+<status status="FAIL" start="2024-09-20T10:32:20.155549" elapsed="2.172454">Execution terminated by signal</status>
+</kw>
+<doc>ตรวจสอบการทำงานของปุ่ม "ลืมรหัสผ่าน"</doc>
+<tag>Login</tag>
+<status status="FAIL" start="2024-09-20T10:32:16.551630" elapsed="5.784405">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+
+
+Also teardown failed:
+Execution terminated by signal</status>
+</test>
+<test id="s1-s1-s1-s1-t12" name="Case 012 Login - email - forgot - cancel" line="101">
+<doc>ตรวจสอบการทำงานของปุ่ม "ยกเลิก" ของหน้า "ลืมรหัสผ่าน"</doc>
+<tag>Login</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-09-20T10:32:22.352253" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-t13" name="Case 013 Login - register" line="116">
+<doc>ตรวจสอบการทำงานของปุ่ม "สมัครสมาชิก"</doc>
+<tag>Login</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-09-20T10:32:22.360261" elapsed="0.008012">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-s1-s1-s1-t14" name="Case 014 Login - register - cancel" line="128">
+<doc>ตรวจสอบการทำงานของปุ่ม "สมัครสมาชิก"</doc>
+<tag>Login</tag>
+<tag>robot:exit</tag>
+<status status="FAIL" start="2024-09-20T10:32:22.377310" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-09-20T10:32:22.391015" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-20T10:30:16.540510" elapsed="125.850505"/>
+</suite>
+<status status="FAIL" start="2024-09-20T10:30:16.532499" elapsed="125.866556"/>
+</suite>
+<status status="FAIL" start="2024-09-20T10:30:16.532499" elapsed="125.874543"/>
+</suite>
+<status status="FAIL" start="2024-09-20T10:30:16.492310" elapsed="125.932269"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="9" fail="2" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+<stat pass="9" fail="5" skip="0">Login</stat>
+</tag>
+<suite>
+<stat pass="9" fail="5" skip="0" id="s1" name="Staging Punpro">Staging Punpro</stat>
+<stat pass="9" fail="5" skip="0" id="s1-s1" name="Component">Staging Punpro.Component</stat>
+<stat pass="9" fail="5" skip="0" id="s1-s1-s1" name="loginPopup">Staging Punpro.Component.loginPopup</stat>
+<stat pass="9" fail="5" skip="0" id="s1-s1-s1-s1" name="loginPopup">Staging Punpro.Component.loginPopup.loginPopup</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-20T10:32:14.157070" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</msg>
+<msg time="2024-09-20T10:32:20.128571" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74330B632+29090]
+	(No symbol) [0x00007FF74327E6E9]
+	(No symbol) [0x00007FF74313B1CA]
+	(No symbol) [0x00007FF74310FAF5]
+	(No symbol) [0x00007FF7431BE2E7]
+	(No symbol) [0x00007FF7431D5EE1]
+	(No symbol) [0x00007FF7431B6493]
+	(No symbol) [0x00007FF7431809B1]
+	(No symbol) [0x00007FF743181B11]
+	GetHandleVerifier [0x00007FF74362883D+3294125]
+	GetHandleVerifier [0x00007FF743674423+3604371]
+	GetHandleVerifier [0x00007FF74366A2E7+3563095]
+	GetHandleVerifier [0x00007FF7433C6F16+797318]
+	(No symbol) [0x00007FF74328986F]
+	(No symbol) [0x00007FF743285454]
+	(No symbol) [0x00007FF7432855E0]
+	(No symbol) [0x00007FF743274A7F]
+	BaseThreadInitThunk [0x00007FFF8D09257D+29]
+	RtlUserThreadStart [0x00007FFF8ED0AF28+40]
+</msg>
+<msg time="2024-09-20T10:32:22.325479" level="ERROR">When closing browser, received exception: Execution terminated by signal</msg>
+</errors>
+</robot>
