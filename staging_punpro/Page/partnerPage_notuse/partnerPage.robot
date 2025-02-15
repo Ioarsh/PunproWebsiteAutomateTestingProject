@@ -63,7 +63,7 @@ Case 006 Register - Next - Unavailable
 Case 007 Register - Next - Available
     [Tags]    Partner
     [Documentation]    ตรวจสอบการคลิกปุ่ม "ถัดไป" เมื่อกดยืนยันรับเงื่อนไข
-    Login in partner page       testpunpro@outlook.com    123456
+    Login in partner page       ${username}   ${password}
     Go to form page
 
 Case 008 Form - Next - Unavailable
